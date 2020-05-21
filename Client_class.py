@@ -47,9 +47,8 @@ class Client:
         self.val = str(val)
         self.timestamp = timestamp or int(time.time())
         for_put_send = f'put {self.servern} {self.val} {self.timestamp}\n'
-        sock1 = self.sock
-        sock1.sendall(for_put_send.encode('utf-8'))
-        data = sock1.recv(1024)
+        self.sock.sendall(for_put_send.encode('utf-8'))
+        data = self.sock.recv(1024)
         data = data.decode('utf-8')
         if 'ok\n\n' != data:
             raise ClientError("The Sever returns error")
