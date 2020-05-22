@@ -20,6 +20,7 @@ class Client:
             raise ClientError("Cannot create the connection", err)
 
     def close(self):
+        """Close the socket"""
         try:
             self.sock.close()
         except socket.err as err:
@@ -80,5 +81,4 @@ class Client:
             dict_met[key].sort(key=lambda x: x[0])
         return dict_met
 
-# get *\n: ok\npalm.cpu 2.0 1150864247\npalm.cpu 0.5 1150864248\neardrum.cpu 3.0 1150864250\n\n
-# get palm.cpu: ok\npalm.cpu 2.0 1150864248\npalm.cpu 0.5 1150864248\n\n
+
