@@ -27,6 +27,7 @@ class Client:
             raise ClientError("Error. The connection did not close.", err)
 
     def validate_dgt(self, string):
+        """Checks integers data received from the server"""
         if string.isdigit():
             return int(string)
         raise ClientError("The Server returns invalid timestamp")
