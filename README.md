@@ -1,7 +1,8 @@
 # client-server
-Socket programming in Python using asynio library. 
+Socket programming in Python using asyncio library. 
 
-Sockets can be configured to act as a server and listen for incoming messages, or connect to other applications as a client. After both ends of a TCP/IP socket are connected, communication is bi-directional.
+The server stores data and processes calls from several clients.
+The client for sending and receiving metrics to test server.
 
 The client and server communicate with each other over a simple text protocol through TCP sockets.
 
