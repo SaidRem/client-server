@@ -33,6 +33,7 @@ class Client:
         raise ClientError("The Server returns invalid timestamp")
 
     def validate_flt(self, string):
+        """Checks data for float""" 
         if string[:string.find('.')].isdigit():
             return float(string)
         raise ClientError("The Server returns invalid value")
