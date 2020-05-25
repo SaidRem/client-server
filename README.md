@@ -13,4 +13,7 @@ General format of the client request: <command> <request data><\n>
  Where:
   - <command> - server command. The command can take one of two values: put -save data on the server, get - return saved data from the server.
   - <request data> - 
-General server response format: <status of server><\n><response data><\n\n>
+General server response format: <response status><\n><response data><\n\n>
+ <response status> - command execution status, two options are possible: "ok" - the was successfully executed on the server and
+  "error" - the command completed with error.
+  <response data> - optional field.
