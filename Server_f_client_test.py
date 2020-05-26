@@ -8,7 +8,7 @@ conn, addr = sock.accept()
 
 print('Connection is set: ', addr)
 
-response = b'ok\npalm.cpu 10.5 1501864247\neardrum.cpu 15.3 1501864259\n\n'
+response = b''      # change 'response' to test the client
 
 with conn:
     while True:
