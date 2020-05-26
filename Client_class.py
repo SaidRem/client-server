@@ -1,6 +1,8 @@
 import time
 import socket
 
+valid_keys = []     # list of valid key
+
 
 class ClientError(Exception):
     """Client's exception class"""
@@ -39,10 +41,9 @@ class Client:
         raise ClientError("The Server returns invalid value")
 
     def validate_key(self, key_v):
-        valid_keys = ['palm.cpu', 'palm.usage', 'palm.disk_usage',
-                      'palm.network_usage', 'eardrum.cpu', 'eardrum.usage',
-                      'eardrum.disk_usage', 'eardrum.network_usage']
-        if key_v not in valid_keys:
+        if key_v in valid_keys or valid_keys == []:
+            return 'ok\n\n'
+        else:
             raise ClientError("The Server returns invalid key")
 
     def put(self, servern, val, timestamp=None):
