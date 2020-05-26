@@ -17,3 +17,4 @@ General server response format: <response status><\n><response data><\n\n>
  <response status> - command execution status, two options are possible: "ok" - the was successfully executed on the server and
   "error" - the command completed with error.
   <response data> - optional field.
+For each metric (<key>), data store on the server: values (<value>) and the time when the measurement was made (<timestamp>).
