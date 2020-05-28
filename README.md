@@ -18,3 +18,7 @@ General server response format: <response status><\n><response data><\n\n>
   "error" - the command completed with error.
   <response data> - optional field.
 For each metric (<key>), data store on the server: values (<value>) and the time when the measurement was made (<timestamp>).
+In cases of:
+   -when a non-existing key is transmitted in a request for data;
+   -successful execution of put command for data save;
+  The server sends the client a string with the status 'ok' and an empty field.
