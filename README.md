@@ -1,4 +1,4 @@
-# client-server
+# client-server (asyncio)
 Socket programming in Python using asyncio library. 
 
 The server stores data and processes calls from several clients.
