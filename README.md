@@ -22,3 +22,4 @@ In cases of:
    -when a non-existing key is transmitted in a request for data;
    -successful execution of put command for data save;
   The server sends the client a string with the status 'ok' and an empty field.
+When working with a client, the server support sessions, communication with the client between requests stays.
