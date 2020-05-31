@@ -1,7 +1,7 @@
 # client-server (asyncio)
 Socket programming in Python using asyncio library. 
 
-The server stores data and processes calls from several clients.
+The server stores data and processes calls from several clients. The server is asynchronous.
 The client for sending and receiving metrics to test server.
 
 The client and server communicate with each other over a simple text protocol through TCP sockets.
