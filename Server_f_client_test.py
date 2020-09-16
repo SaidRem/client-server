@@ -1,3 +1,4 @@
+# Test connection.
 import socket
 
 sock = socket.socket()
